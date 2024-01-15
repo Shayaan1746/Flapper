@@ -18,6 +18,10 @@ let game_state = 'Start';
 img.style.display = 'none';
 message.classList.add('messageStyle');
 
+function main() {
+    MouseEvent(keydown);
+}
+
 document.addEventListener('keydown', (e) => {
     
     if(e.key == 'Enter' && game_state != 'Play'){
@@ -72,14 +76,14 @@ function play(){
         if(game_state != 'Play') return;
         bird_dy = bird_dy + grativy;
         document.addEventListener('keydown', (e) => {
-            if(e.key == 'ArrowUp' || e.key == ' '){
+            if(e.key == 'Space, ArrowUp' || e.key == ' '){
                 img.src = 'images/Bird-2.png';
                 bird_dy = -7.6;
             }
         });
 
         document.addEventListener('keyup', (e) => {
-            if(e.key == 'ArrowUp' || e.key == ' '){
+            if(e.key == 'Space, ArrowUp' || e.key == ' '){
                 img.src = 'images/Bird.png';
             }
         });
